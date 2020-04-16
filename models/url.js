@@ -1,6 +1,8 @@
 const Schema = mongoose.Schema;
  
-const URL = new Schema({
+const urlSchema = new Schema({
   longURL: String,
   shortURL: String
 });
+
+module.exports = mongoose.model("URL", urlSchema)
