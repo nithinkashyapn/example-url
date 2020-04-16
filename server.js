@@ -37,7 +37,7 @@ app.post("/", async function (req, res) {
   body = new urls({longURL: body.longURL, shortURL: Math.floor(Math.random() * (1000 - 1) + 1)})
   let result = await body.save() 
   console.log(result)
-  res.send("Success");
+  res.send("Shortcode is " + result.shortURL);
 })
 
 app.listen(3000)
